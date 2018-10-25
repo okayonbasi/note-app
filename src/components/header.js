@@ -10,13 +10,13 @@ class header extends Component {
             <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#home">Notes</a>
+      <a href="" className="notes">Notes</a>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
   <Navbar.Collapse>
 
-    <Navbar.Text pullRight><p className="NewNote">Create</p></Navbar.Text>
+    <Navbar.Text pullRight><Button className="NewNote">Create</Button></Navbar.Text>
   </Navbar.Collapse>
 </Navbar>
 </div>
