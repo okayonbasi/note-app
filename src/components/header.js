@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Navlink, Link, BrowserRouter as Router, Route} from 'react-router-dom';
-import {Image, Button, Navbar, NavItem, Nav} from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
 import '../assets/style/header.sass';
+import { FaPlus } from 'react-icons/fa';
+
 
 class header extends Component {
     render() {
@@ -16,7 +17,7 @@ class header extends Component {
   </Navbar.Header>
   <Navbar.Collapse>
 
-    <Navbar.Text pullRight><Button className="NewNote">Create</Button></Navbar.Text>
+    <Navbar.Text pullRight><button className="NewNote"><FaPlus /> Create</button></Navbar.Text>
   </Navbar.Collapse>
 </Navbar>
 </div>
