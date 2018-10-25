@@ -8,10 +8,10 @@ class Body extends Component {
         return (
             <Grid>
   <Row className="show-grid">
-    <Col xs={6} md={4}>
+    <Col xs={6} md={2}>
       <NoteList/>
     </Col>
-    <Col xs={6} md={8}>
+    <Col xs={6} md={10}>
       <WNote/>
     </Col>
   </Row>

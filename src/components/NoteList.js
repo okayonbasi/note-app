@@ -5,7 +5,7 @@ class NoteList extends Component {
     render() {
         return (
             <div>
-                Notlar Gelecek
+                Notes will be here
             </div>
         );
     }
