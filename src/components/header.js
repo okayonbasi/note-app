@@ -11,7 +11,7 @@ class header extends Component {
             <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="" className="notes">Notes</a>
+      <p className="notes">Notes</p>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
