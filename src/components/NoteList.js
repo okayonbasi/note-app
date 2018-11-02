@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-const NoteItem = this.state.notes.map(note => note.baslik);
+import '../style.sass';
 
 class NoteList extends Component {
 
@@ -21,9 +20,11 @@ class NoteList extends Component {
 
     render() {
 
+        const noteItem = this.state.notes.map(note => <li key={note.id} className={"none"}>{note.baslik}</li>);
+
         return (
             <div>
-                {NoteItem}
+                {noteItem}
             </div>
         );
     }
