@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style.sass';
+import '../assets/style/noteItem.sass';
 
 class NoteList extends Component {
 
