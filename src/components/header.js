@@ -3,7 +3,6 @@ import { Navbar} from 'react-bootstrap';
 import '../assets/style/header.sass';
 import { FaPlus } from 'react-icons/fa';
 
-
 class header extends Component {
     render() {
         return (

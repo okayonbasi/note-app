@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
 import '../assets/style/noteItem.sass';
+import {connect} from 'react-redux';
+import {addNote} from '../actions/noteAction';
+import { FaArrowCircleRight } from 'react-icons/fa';
 
 class NoteList extends Component {
 
-    state = {
-        notes:[
-            {
-               id:1,
-               baslik: "Başlık 1",
-               note: "Başlık 1'in  Notu"     
-            },
-            {
-                id: 2,
-                baslik: "Başlık 2",
-                note: "Başlık 2'in  Notu"   
-            }
-         ]
+    
+    onAddNote = () => {
+        this.props.addNote({text: "test", id:2});
     }
-
+    
     render() {
-
-        const noteItem = this.state.notes.map(note => <li key={note.id} className={"none"}>{note.baslik}</li>);
-
+        console.log(this.props)
+        const noteItem = this.props.noteReducer.map(note => <li key={note.id} className={"none"}>{note.text} <FaArrowCircleRight /></li>);
         return (
             <div>
+                <button onClick={this.onAddNote}>Add new Note</button>
                 {noteItem}
+
             </div>
         );
     }
 }
 
-export default NoteList;
+const mapStateToProps = state => {
+    return state;
+}
+
+const mapDispatchToProps = {
+    addNote : addNote
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(NoteList);
